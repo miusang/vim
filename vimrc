@@ -59,7 +59,7 @@ endif
 "let &t_SI .= "\<Esc>[5 q"
 "let &t_EI .= "\<Esc>[0 q"
 
-call plug#begin('')
+call plug#begin('~/.vim/plug')
     Plug 'preservim/nerdtree'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-scripts/c.vim'
