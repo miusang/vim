@@ -59,3 +59,12 @@ endif
 "let &t_SI .= "\<Esc>[5 q"
 "let &t_EI .= "\<Esc>[0 q"
 
+call plug#begin('')
+    Plug 'preservim/nerdtree'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-scripts/c.vim'
+    Plug 'kien/ctrlp.vim'
+call plug#end()
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
