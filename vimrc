@@ -57,10 +57,10 @@ endif
 " 通用按键映射
 nmap J 5j
 nmap K 5k
-nmap <C-Up> :resize +1<CR>
-nmap <C-Down> :resize +1<CR>
-nmap <C-Left> :vertical resize -1<CR>
-nmap <C-right> :vertical resize +1<CR>
+nmap <C-j> :resize +1<CR>
+nmap <C-k> :resize +1<CR>
+nmap <C-h> :vertical resize -1<CR>
+nmap <C-l> :vertical resize +1<CR>
 nmap <LEADER><CR> :nohlsearch<CR>
 
 call plug#begin('~/.vim/plug')
