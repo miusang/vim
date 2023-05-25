@@ -43,6 +43,9 @@ set t_Co=256
 set cursorline
 highlight Cursorline cterm=NONE ctermbg=237
 
+" 允许加载文件类型插件
+filetype plugin on
+
 " 打开上次位置
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -51,25 +54,29 @@ endif
 "let &t_SI .= "\<Esc>[5 q"
 "let &t_EI .= "\<Esc>[0 q"
 
-call plug#begin('~/.vim/plug')
-    Plug 'preservim/nerdtree'
-    Plug 'preservim/tagbar'
-    Plug 'vim-airline/vim-airline'
-    Plug 'kien/ctrlp.vim'
-call plug#end()
-
-" 按键映射
+" 通用按键映射
 nmap J 5j
 nmap K 5k
 nmap <C-Up> :resize +1<CR>
 nmap <C-Down> :resize +1<CR>
 nmap <C-Left> :vertical resize -1<CR>
 nmap <C-right> :vertical resize +1<CR>
-noremap <LEADER><CR> :nohlsearch<CR>
+nmap <LEADER><CR> :nohlsearch<CR>
 
-" NerdTree 按键
+call plug#begin('~/.vim/plug')
+    Plug 'preservim/nerdtree'
+    Plug 'preservim/nerdcommenter'
+    Plug 'preservim/tagbar'
+    Plug 'vim-airline/vim-airline'
+    Plug 'kien/ctrlp.vim'
+call plug#end()
+
+" NerdTree 设置
 nmap <leader>n :NERDTreeFocus<CR>
 nmap <leader>t :NERDTreeToggle<CR>
 
-" TagBar 按键
+" NerdCommenter 设置
+let g:NERDSpaceDelims = 1
+
+" TagBar 设置
 nmap <C-t> :TagbarToggle<CR>
