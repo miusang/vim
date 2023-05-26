@@ -61,6 +61,8 @@ nmap <C-j> :resize +1<CR>
 nmap <C-k> :resize +1<CR>
 nmap <C-h> :vertical resize -1<CR>
 nmap <C-l> :vertical resize +1<CR>
+nmap <leader>v "*p
+vmap <leader>c "+y
 nmap <LEADER><CR> :nohlsearch<CR>
 
 call plug#begin('~/.vim/plug')
@@ -73,7 +75,7 @@ call plug#end()
 
 " NerdTree 设置
 nmap <leader>n :NERDTreeFocus<CR>
-nmap <leader>t :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeToggle<CR>
 
 " NerdCommenter 设置
 let g:NERDSpaceDelims = 1
