@@ -1,5 +1,5 @@
 " utf-8编码
-set encoding=utf-8
+set encoding=utf-8 fileencodings=utf-8
 
 " leader键
 let mapleader="`"
@@ -35,6 +35,8 @@ set backspace=indent,eol,start
 " 禁止生成临时文件
 set nobackup
 set noswapfile
+set nowritebackup
+set noundofile
 
 " 开启256色
 set t_Co=256
