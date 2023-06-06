@@ -14,6 +14,7 @@ set smartcase
 
 " 显示行号
 set number
+set relativenumber
 
 " 不与vi兼容
 set nocompatible
