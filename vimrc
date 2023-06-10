@@ -73,7 +73,8 @@ call plug#begin('~/.vim/plug')
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/tagbar'
     Plug 'vim-airline/vim-airline'
-    Plug 'kien/ctrlp.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " NerdTree 设置
@@ -85,3 +86,7 @@ let g:NERDSpaceDelims = 1
 
 " TagBar 设置
 nmap <C-t> :TagbarToggle<CR>
+
+" fzf设置
+nmap <silent> <C-f> :Files<CR>
+nmap <silent> <C-b> :Buffers<CR>
